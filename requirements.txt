@@ -1,0 +1,8 @@
+flask
+pep8
+python-daemon
+virtualenv
+requests
+boto
+awscli
+macfsevents
