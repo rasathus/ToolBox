@@ -1,0 +1,3 @@
+[submodule "littlehelp"]
+	path = littlehelp
+	url = git@github.com:rasathus/littlehelp.git
