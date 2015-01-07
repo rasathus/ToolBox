@@ -153,9 +153,9 @@ echo "Speeding up wake from sleep to 24 hours from an hour"
 # http://www.cultofmac.com/221392/quick-hack-speeds-up-retina-macbooks-wake-from-sleep-os-x-tips/
 sudo pmset -a standbydelay 86400
 
-echo ""
-echo "Disabling the annoying backswipe in Chrome"
-defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+# echo ""
+# echo "Disabling the annoying backswipe in Chrome"
+# defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 
 
 ################################################################################
@@ -583,6 +583,16 @@ case $response in
   *) break;;
 esac
 
+echo ""
+echo "Would you like to install GPG ? (y/n)"
+read -r response
+case $response in
+  [yY])
+    brew install gpg2
+    break;;
+  *) break;;
+esac
+
 ###############################################################################
 # Kill affected applications
 ###############################################################################
@@ -590,6 +600,8 @@ esac
 echo ""
 cecho "Done!" $cyan
 echo ""
+echo "Restarting apps in 5 seconds."
+sleep 5
 echo ""
 cecho "################################################################################" $white
 echo ""
