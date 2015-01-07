@@ -583,6 +583,16 @@ case $response in
   *) break;;
 esac
 
+echo ""
+echo "Would you like to install GPG ? (y/n)"
+read -r response
+case $response in
+  [yY])
+    brew install gpg2
+    break;;
+  *) break;;
+esac
+
 ###############################################################################
 # Kill affected applications
 ###############################################################################
